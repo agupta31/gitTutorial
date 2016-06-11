@@ -1,0 +1,57 @@
+git add .-->this dot refers to our repository.This command tells git to add these files to our repository.
+git commit -m "this is our first commit";-->this allows us to save a file at a particular point of time.
+git log->shows a list of your commits
+git log --author="akash"-->shows commits only for that particular person.
+
+what happens when you add?
+
+working copy>staging area>repository--->git workflow
+
+working copy-is your current directory
+stagin area is the place where your filess will sit when you add them
+repository-final place where your files will sit when you commit them.
+
+
+git diff-->shows the difference the file/files in your working directory and your main repository.
+git diff --staged-->shows diif bewteen files in the staging area and the main repository.
+
+
+git rm filename.txt-->removes the file from the working directory as well as the repository.
+
+in git moving a file is the same as renaming it.
+
+git mv filename.txt newfilename.txt--->same as git ren filename.txt newfilename.txt
+
+git commit -am "added directly to the repository"-->will commit changes directly to the repository instead of first placing
+it on the staging area using the add command.This is helpful in certain situations when you are making small changes to files.
+
+
+UNDO CHANGES;
+git checkout -- index.html-->checkout tells git to take this file from the repository and place it in your current working directory
+and replace the file that existed before.This helps us undo unwanted changes in files.
+
+
+
+UNSTAGE A FILE FROM THE STAGING AREA:
+suppose you have added a file index.html to the staging area using add command.In order to bring it back to the current working
+directory the command is:
+git reset HEAD index.html
+
+
+
+GET OLDER VERSIONS FROM GIT:
+
+first>second>third--->want to get second again-->we dont delete the third but we just copy the second version to the current working
+directory.
+so after copying the version will look like.
+first>second>third>second
+
+
+git log-->shows the list of commits
+git checkout commit_id -- index.html-->brings the file from the given commit_id to the current directory.
+then add and commit the changes.
+
+
+ADDING A FOLDER ON YOUR DESKTOP TO GITHUB:
+git remote add origin <repository link>
+git push -u origin master

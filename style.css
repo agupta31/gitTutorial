@@ -1,0 +1,16 @@
+html{
+	text-size-adjust:100%;
+}
+body{
+
+	margin:0;
+}
+div{
+	width:70%;
+	margin:auto;
+	text-align: center;
+	font-family: sans-serif;
+}
+img{
+	width:100%;
+}
